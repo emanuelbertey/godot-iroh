@@ -70,7 +70,7 @@ impl IrohClient {
     #[func]
     fn connection_error(&self) -> GString {
         if let ClientStatus::Failed(error) = &self.status {
-            return error.to_string().into();
+            return GString::from(&error.to_string());
         }
         GString::new()
     }

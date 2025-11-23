@@ -1,1 +1,8 @@
 /target
+*.dll
+*.exe
+*.pck
+*.apk
+*.so
+/examples/chat_app/.godot
+*.idsig

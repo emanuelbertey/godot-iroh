@@ -58,7 +58,7 @@ impl IrohServer {
     /// Returns the connection string that can be used to connect to this server.
     #[func]
     fn connection_string(&self) -> GString {
-        GString::from(self.listener.connection_string())
+        GString::from(&self.listener.connection_string())
     }
 
     /// Connect to an other server using the connection string.
@@ -88,7 +88,7 @@ impl IrohServer {
     fn connected_peers(&self) -> Dictionary {
         self.peers
             .iter()
-            .map(|(id, connection)| (*id, GString::from(connection.connection_string())))
+            .map(|(id, connection)| (*id, GString::from(&connection.connection_string())))
             .collect()
     }
 
@@ -98,7 +98,7 @@ impl IrohServer {
     fn peer_connection_string(&self, peer_id: i32) -> GString {
         self.peers
             .get(&peer_id)
-            .map(|connection| GString::from(connection.connection_string()))
+            .map(|connection| GString::from(&connection.connection_string()))
             .unwrap_or_else(GString::new)
     }
 }
