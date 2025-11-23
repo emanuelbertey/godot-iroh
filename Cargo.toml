@@ -11,7 +11,7 @@ tokio = { version = "1.47.1", features = ["rt-multi-thread"] }
 iroh = { version = "0.91.2", default-features = false }
 godot = "0.4.2"
 anyhow = "1.0.99"
-bytes = "1.10.1"
+bytes = "1.11.0"
 base64 = "0.22.1"
 
 [profile.release]
