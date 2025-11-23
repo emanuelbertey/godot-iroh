@@ -7,3 +7,5 @@
 /examples/chat_app/.godot
 *.idsig
 *.import
+*.uid
+*.import
