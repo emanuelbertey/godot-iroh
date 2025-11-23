@@ -6,3 +6,4 @@
 *.so
 /examples/chat_app/.godot
 *.idsig
+*.import
